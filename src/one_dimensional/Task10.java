@@ -83,12 +83,12 @@ public class Task10 {
         int c_k = k;
         int j = 0;
 
-        for (int i = 0; i < arr.length ; i++) {
-            if( c_k > 0){
-                new_arr[arr.length - c_k] = arr[i];
+        for (int value : arr) {
+            if (c_k > 0) {
+                new_arr[arr.length - c_k] = value;
                 c_k--;
-            }else  {
-                new_arr[j++] = arr[i];
+            } else {
+                new_arr[j++] = value;
             }
         }
 
