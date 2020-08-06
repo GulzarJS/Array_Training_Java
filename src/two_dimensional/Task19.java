@@ -8,25 +8,32 @@ public class Task19 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter dimension of matrix: ");
+        System.out.print("Enter number of raw and column of matrix: ");
 
         int n = scanner.nextInt();
-        int number = 1;
+
 
         int[][] array = new int[n][n];
+        fill_along_diagonal(array);
 
-        for (int j = 0; j < n; j++) {
+        System.out.println("Here is your matrix");
+        print(array);
+    }
+
+    public static void fill_along_diagonal (int[][] array){
+        int number = 1;
+        for (int j = 0; j < array.length; j++) {
             int i;
             if(j == 0){
                 i = 0;
             }else{
-                i = n-1;
+                i = array.length-1;
             }
-            for (; i < n; i++) {
+            for (; i < array.length; i++) {
                 int a = i;
                 int b = j;
                 for(int k = 0; k<i+1 ; k++){
-                    if(b == n){
+                    if(b == array.length){
                         break;
                     }
 
@@ -36,8 +43,6 @@ public class Task19 {
 
             }
         }
-        System.out.println("Here is your matrix");
-        print(array);
     }
 
     public static void print ( int[][] array){
