@@ -39,7 +39,6 @@ public class Task8 {
             if (array[i][j] != 0) {
                 j -= 2;
                 i++;
-                continue;
             } else {
                 array[i][j] = number++;
                 j++;
