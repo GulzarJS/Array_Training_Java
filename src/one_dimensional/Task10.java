@@ -65,10 +65,12 @@ public class Task10 {
         int j = 0;
 
         for (int i = 0; i < arr.length ; i++) {
+
             while( c_k > 0){
                 new_arr[j++] = arr[arr.length - c_k];
                 c_k--;
             }
+
             if(i < (arr.length - k)) {
                 new_arr[j++] = arr[i];
             }
